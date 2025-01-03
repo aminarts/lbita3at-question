@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do You Love Me?</title>
+    <style>
+        body {
+            text-align: center;
+            margin-top: 100px;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            color: purple;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+        }
+        #yesButton {
+            background-color: lightgreen;
+        }
+        #noButton {
+            background-color: lightcoral;
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <h1>Do You Love Me?</h1>
+    <button id="yesButton" onclick="showLoveMessage()">Yes</button>
+    <button id="noButton" onmouseover="moveNoButton()">No</button>
+
+    <script>
+        function showLoveMessage() {
+            alert("Ana kanmout 3lik ❤️");
+        }
+
+        function moveNoButton() {
+            const noButton = document.getElementById('noButton');
+            const x = Math.random() * window.innerWidth - noButton.offsetWidth;
+            const y = Math.random() * window.innerHeight - noButton.offsetHeight;
+
+            noButton.style.left = Math.max(x, 0) + 'px';
+            noButton.style.top = Math.max(y, 0) + 'px';
+        }
+    </script>
+</body>
+</html>
